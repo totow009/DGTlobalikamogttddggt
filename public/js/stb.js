@@ -31,7 +31,7 @@ $(function(){
             url: '/NkMNm4664XhcW8KuukHk',
             type: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({a1,s2,s3,s4,s5,s6,s7,s8}),
+            data: JSON.stringify({s1,s2,s3,s4,s5,s6,s7,s8}),
             success: function(info) {
                 if(info.OK){
                     window.location = "/Q89HFszQPd3TFv4mx65k";
@@ -44,7 +44,7 @@ $(function(){
         e.preventDefault();
         e.preventDefault();
         let a1 = $("#one").val();
-        let a2 = `${$("#two1").val()}/${$("#two3").val()}`;
+        let a2 = $("#two1").val();
         let a3 = $("#three").val();
         let a4 = $("#five").val();
 

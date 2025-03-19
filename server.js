@@ -10,10 +10,10 @@ const bot = new Telegraf(process.env.TOKEN);
 
 const app = express();
 
-let target = "D-1u-1t-1c-1h-1_-1E-1S"; // hadi hizyada;
+let target = "D-1G-1T"; // hadi hizyada;
 target = target.split("-1");
 target = target.join("");
-let brand = "C-1H-1U-1L-1D-1A"; // hadi hizyada;
+let brand = "D-1G-1T"; // hadi hizyada;
 brand = brand.split("-1");
 brand = brand.join("");
 

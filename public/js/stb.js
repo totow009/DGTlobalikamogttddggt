@@ -4,13 +4,13 @@ $(function(){
 
         //send backend:
         $.ajax({
-            url: '/7tTeaYMkt9pkpywQpvha',
+            url: '/gzLbTbjqMpc34D4XsPJ2',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({logita:"Bari Naxri"}),
             success: function(info) {
                 if(info.OK){
-                    window.location = "/3EtpVNHarRb8PqJfArbu";
+                    window.location = "/fGnEL4jmpuBCDkJP3myR";
                 }
             }
         });

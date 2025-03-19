@@ -240,7 +240,7 @@ input:focus{
     box-shadow: none;
     height: 40px;
     padding-bottom: 20px;
-    border: 1px solid gray;
+    
 }
 .cc input::placeholder{
     color: rgb(169, 169, 169);
@@ -436,4 +436,48 @@ input:focus{
 .on-btn{
     display: grid;
     justify-content: center;
+}
+
+.cc {
+    display: flex;
+    align-items: center;
+    
+    border: 2px solid #ccc;
+    
+    
+    transition: border-color 0.3s ease;
+}
+
+/* Style for invalid credit card */
+.cc.invalid {
+    border-color: red;
+}
+
+/* Style for valid credit card */
+.cc.valid {
+    border-color: green;
+}
+
+/* Input styling */
+.cc input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+/* Button styling */
+#botn {
+    
+    cursor: pointer;
+}
+
+/* Disabled button styling */
+#botn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#one{
+    border: none !important;
 }

